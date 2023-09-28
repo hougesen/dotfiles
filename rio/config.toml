@@ -1,0 +1,62 @@
+blinking_cursor = true
+performance = "High"
+disable-unfocused-render = false
+use-fork = true
+line-height = 1.0
+theme = "onedark"
+padding-x = 0.0
+cursor = "▇"
+env-vars = []
+option-as-alt = "false"
+ignore_theme_selection_fg_color = true
+
+[navigation]
+mode = "CollapsedTab"
+clickable = true
+use-current-path = true
+use-terminal-title = false
+macos-hide-window-buttons = false
+
+[[navigation.color-automation]]
+program = "nvim"
+color = "#ff00ff"
+
+[window]
+opacity = 1.0
+width = 600
+height = 400
+mode = "Windowed"
+
+[shell]
+program = ""
+args = ["--login"]
+
+[fonts]
+size = 18.0
+
+[fonts.regular]
+family = "cascadiamono"
+weight = 400
+style = "normal"
+
+[fonts.bold]
+family = "cascadiamono"
+weight = 800
+style = "normal"
+
+[fonts.bold-italic]
+family = "cascadiamono"
+weight = 800
+style = "italic"
+
+[fonts.italic]
+family = "cascadiamono"
+weight = 400
+style = "italic"
+
+[developer]
+enable-fps-counter = false
+log-level = "OFF"
+
+[bindings]
+keys = []
