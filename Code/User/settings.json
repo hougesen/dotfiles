@@ -1,0 +1,268 @@
+{
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[dart]": {
+        "editor.defaultFormatter": "Dart-Code.dart-code"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[nim]": {
+        "editor.defaultFormatter": "nimsaem.nimvscode"
+    },
+    "[nimble]": {
+        "editor.defaultFormatter": "kosz78.nim"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[ruby]": {
+        "editor.defaultFormatter": "Shopify.ruby-lsp",
+        "editor.semanticHighlighting.enabled": true
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "[svg]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[toml]": {
+        "editor.defaultFormatter": "bodil.prettier-toml"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.clang_format_style": "WebKit",
+    "C_Cpp.default.cppStandard": "gnu++20",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": ["--clang-tidy"],
+    "clangd.path": "/home/geg/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.6/clangd_15.0.6/bin/clangd",
+    "crystal-lang.completion": true,
+    "crystal-lang.hover": true,
+    "crystal-lang.implementations": true,
+    "cSpell.userWords": [
+        "Adlab",
+        "axios",
+        "cavea",
+        "caveaio",
+        "composables",
+        "hougesen",
+        "Hougesen",
+        "netwrk",
+        "pinia",
+        "VITE"
+    ],
+    "css.lint.duplicateProperties": "warning",
+    "dart.flutterSdkPath": ".fvm/flutter_sdk",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": "active",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.parameterHints.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.wordWrap": "on",
+    "emmet.includeLanguages": {
+        "phoenix-heex": "html"
+    },
+    "emmet.syntaxProfiles": {
+        "html-eex": "html",
+        "vue": "html",
+        "vue-html": "html"
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.validate": ["typescript", "javascript"],
+    "explorer.confirmDragAndDrop": true,
+    "files.associations": {
+        "*.heex": "html-eex",
+        "*.svg": "html",
+        "Cargo.lock": "toml",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "LICENSE": "plaintext"
+    },
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+        // Remove from file watching
+        "**/.fvm": true
+    },
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "gitlens.codeLens.enabled": false,
+    "go.lintTool": "golangci-lint",
+    "haskell.manageHLS": "GHCup",
+    "jest.autoRun": {
+        "jest.autoEnable": false,
+        "jest.runAllTestsFirst": false,
+        "jest.showCoverageOnLoad": false
+    },
+    "js/ts.implicitProjectConfig.checkJs": false,
+    "julia.executablePath": "/home/geg/.juliaup/bin/julia",
+    "julia.symbolCacheDownload": true,
+    "less.lint.duplicateProperties": "warning",
+    "less.lint.hexColorLength": "warning",
+    "nativescript.analytics.enabled": false,
+    "nim.enableNimsuggest": true,
+    "nim.lintOnSave": true,
+    "nim.nimprettyIndent": 4,
+    "nim.nimprettyMaxLineLen": 120,
+    "prettier.arrowParens": "always",
+    "prettier.endOfLine": "lf",
+    "prettier.jsxSingleQuote": true,
+    "prettier.printWidth": 120,
+    "prettier.requireConfig": false,
+    "prettier.requirePragma": false,
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "es5",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.defaultInterpreterPath": "python3",
+    "python.formatting.provider": "black",
+    "python.linting.banditEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyArgs": [
+        "--follow-imports=silent",
+        "--ignore-missing-imports",
+        "--show-column-numbers",
+        "--no-pretty",
+        "--check-untyped-defs"
+    ],
+    "python.linting.mypyEnabled": true,
+    "python.linting.prospectorEnabled": true,
+    "python.linting.pydocstyleEnabled": true,
+    "python.linting.pylamaEnabled": true,
+    "python.linting.pylintEnabled": true,
+    "redhat.telemetry.enabled": false,
+    "remote.SSH.remotePlatform": {
+        "164.90.237.227": "linux",
+        "192.168.87.46": "linux",
+        "192.168.87.64": "linux"
+    },
+    "remoteHub.commitDirectlyWarning": "off",
+    "rubyLsp.enabledFeatures": {
+        "codeActions": true,
+        "codeLens": true,
+        "completion": true,
+        "diagnostics": true,
+        "documentHighlights": true,
+        "documentLink": true,
+        "documentSymbols": true,
+        "foldingRanges": true,
+        "formatting": true,
+        "hover": true,
+        "inlayHint": true,
+        "onTypeFormatting": true,
+        "selectionRanges": true,
+        "semanticHighlighting": true
+    },
+    "rubyLsp.formatter": "syntax_tree",
+    "rubyLsp.rubyVersionManager": "asdf",
+    "rust-analyzer.cachePriming.enable": false, // speed up mono repos
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.lens.implementations": false,
+    "rust.clippy_preference": "on",
+    "rust.unstable_features": true,
+    "scss.lint.compatibleVendorPrefixes": "warning",
+    "scss.lint.duplicateProperties": "warning",
+    "scss.lint.hexColorLength": "warning",
+    "search.exclude": {
+        // Remove .fvm files from search
+        "**/.fvm": true
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "settingsSync.ignoredExtensions": ["smcpeak.default-keys-windows"],
+    "shellformat.effectLanguages": [
+        "shellscript",
+        "dockerfile",
+        "hosts",
+        "jvmoptions",
+        "ignore",
+        "gitignore",
+        "properties",
+        "spring-boot-properties",
+        "azcli",
+        "bats"
+    ],
+    "sorbet.enabled": true,
+    "sorbet.highlightUntyped": true,
+    "svelte.enable-ts-plugin": true,
+    "tailwindCSS.lint.recommendedVariantOrder": "error",
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.profiles.windows": {
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe (migrated)": {
+            "args": [],
+            "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        }
+    },
+    "terminal.integrated.scrollback": 2000,
+    "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX", "[ ]", "[x]", "DISABLED", "NOTE", "DEFAULT"],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "trunk.trunkGrayOutNonBlockingIssues": false,
+    "vetur.completion.autoImport": false,
+    "vetur.completion.tagCasing": "initial",
+    "vetur.languageFeatures.updateImportOnFileMove": false,
+    "vetur.validation.templateProps": true,
+    "vim.useSystemClipboard": true,
+    "vitest.enable": true,
+    "vitest.include": ["**/*.{test,spec,e2e-spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    "volar.completion.preferredTagNameCase": "pascal",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.zoomLevel": -1
+}
