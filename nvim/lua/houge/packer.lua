@@ -32,4 +32,6 @@ return require("packer").startup(function(use)
 	})
 
 	use("hougesen/blame-me.nvim")
+
+	use("echasnovski/mini.pairs")
 end)
