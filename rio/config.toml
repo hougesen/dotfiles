@@ -33,26 +33,7 @@ args = ["--login"]
 
 [fonts]
 size = 18.0
-
-[fonts.regular]
-family = "cascadiamono"
-weight = 400
-style = "normal"
-
-[fonts.bold]
-family = "cascadiamono"
-weight = 800
-style = "normal"
-
-[fonts.bold-italic]
-family = "cascadiamono"
-weight = 800
-style = "italic"
-
-[fonts.italic]
-family = "cascadiamono"
-weight = 400
-style = "italic"
+family = "Dejavu Sans Mono"
 
 [developer]
 enable-fps-counter = false
