@@ -41,7 +41,10 @@ local plugins = {
 	},
 
 	"echasnovski/mini.pairs",
+
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
+
+	{ "stevearc/conform.nvim", opts = {} },
 }
 
 local opts = {

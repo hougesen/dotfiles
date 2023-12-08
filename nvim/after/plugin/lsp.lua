@@ -3,7 +3,7 @@ local lspconfig = require("lspconfig")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
+local default_lsps = {
 	-- typescript
 	"tsserver",
 	"eslint",
@@ -17,24 +17,17 @@ lsp.ensure_installed({
 	-- python
 	"pyright",
 	"ruff_lsp",
-	--"mypy",
-
-	-- ruby
-	--"sorbet",
-	--"rubocop",
-
-	-- nim
-	-- "nimlangserver",
-
-	-- crystal
-	--"crystalline",
 
 	-- haskell
 	"hls",
 
 	-- vue
 	"volar",
-})
+}
+
+lsp.ensure_installed(default_lsps)
+
+lsp.setup_servers(default_lsps)
 
 lsp.set_preferences({
 	suggest_lsp_servers = false,
@@ -92,19 +85,6 @@ lspconfig.lua_ls.setup({
 				version = "LuaJIT",
 			},
 		},
-	},
-})
-
-lspconfig.hls.setup({})
-
-lsp.format_on_save({
-	format_opts = {
-		async = false,
-		timeout_ms = 10000,
-	},
-	servers = {
-		-- ['tsserver'] = {'javascript', 'typescript'},
-		["rust_analyzer"] = { "rust" },
 	},
 })
 
