@@ -2,16 +2,38 @@ local conform = require("conform")
 
 local formatters_by_ft = {
 	lua = { "stylua" },
+
 	rust = { "rust_analyzer" },
 
-	python = { { "ruff_fix", "isort" }, { "ruff_format", "black" } },
+	python = function(bufnr)
+		if conform.get_formatter_info("ruff_format", bufnr).available then
+			return { "ruff_format" }
+		else
+			return { "isort", "black" }
+		end
+	end,
+
+	c = { "clang_format" },
 
 	cpp = { "clang_format" },
-	c = { "clang_format" },
 
 	go = { "gofumpt", "goimports" },
 
-	cs = { "csharpier" },
+	ruby = { "rubocop" },
+
+	ocaml = { "ocamlformat" },
+
+	crystal = {},
+
+	dart = { "dart_format" },
+
+	-- injected = {}
+
+	sh = { "shellcheck" },
+
+	toml = { "taplo" },
+
+	["_"] = { "trim_whitespace" },
 }
 
 local prettier_file_types = {
@@ -39,6 +61,8 @@ for _, ft in pairs(prettier_file_types) do
 	formatters_by_ft[ft] = p
 end
 
+formatters_by_ft["markdown"] = { p, "injected" }
+
 conform.setup({
 	formatters_by_ft = formatters_by_ft,
 	format_on_save = {
@@ -46,3 +70,5 @@ conform.setup({
 		lsp_fallback = true,
 	},
 })
+
+require("conform.formatters.injected").options.ignore_errors = false
