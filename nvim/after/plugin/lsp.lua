@@ -1,5 +1,7 @@
 local lsp = require("lsp-zero")
 local lspconfig = require("lspconfig")
+local cmp = require("cmp")
+local luasnip = require("luasnip")
 
 lsp.preset("recommended")
 
@@ -94,12 +96,16 @@ vim.diagnostic.config({
 	virtual_text = true,
 })
 
-local cmp = require("cmp")
-local cmp_action = require("lsp-zero").cmp_action()
+local cmp_action = lsp.cmp_action()
 
 cmp.setup({
-	mapping = {
+	snippet = {
+		expand = function(args)
+			luasnip.lsp_expand(args.body)
+		end,
+	},
+	mapping = cmp.mapping.preset.insert({
 		["<Tab>"] = cmp_action.tab_complete(),
 		["<S-Tab>"] = cmp_action.select_prev_or_fallback(),
-	},
+	}),
 })
