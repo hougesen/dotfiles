@@ -62,6 +62,13 @@ local plugins = {
 	},
 
 	{ "folke/neodev.nvim", opts = {} },
+
+	{
+		"zeioth/garbage-day.nvim",
+		dependencies = "neovim/nvim-lspconfig",
+		event = "VeryLazy",
+		opts = {},
+	},
 }
 
 local opts = {
