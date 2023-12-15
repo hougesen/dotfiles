@@ -51,6 +51,8 @@ local plugins = {
 
 	{ "stevearc/conform.nvim", opts = {} },
 
+	"mg979/vim-visual-multi",
+
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
