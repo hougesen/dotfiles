@@ -60,6 +60,8 @@ local plugins = {
 			open_mapping = [[<C-S-`>]],
 		},
 	},
+
+	{ "folke/neodev.nvim", opts = {} },
 }
 
 local opts = {
