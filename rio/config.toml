@@ -1,25 +1,35 @@
+editor = "nvim"
 blinking_cursor = true
 performance = "High"
-disable-unfocused-render = false
 use-fork = true
 line-height = 1.0
 theme = "onedark"
 padding-x = 0.0
 cursor = "▇"
-env-vars = []
-option-as-alt = "false"
-ignore_theme_selection_fg_color = true
+ignore-selection-foreground-color = true
+working-dir = "/home/geg/Desktop"
+hide-cursor-when-typing = false
+
+[keyboard]
+use-kitty-keyboard-protocol = true
+disable-ctlseqs-alt = false
 
 [navigation]
 mode = "CollapsedTab"
 clickable = true
 use-current-path = true
-use-terminal-title = false
-macos-hide-window-buttons = false
-
-[[navigation.color-automation]]
-program = "nvim"
-color = "#ff00ff"
+use-terminal-title = true
+color-automation = [
+  { program = "nvim", color = "#00b952" },
+  { program = "vim", color = "#019331" },
+  { program = "docker", color = "#1d63ed" },
+  { program = "npm", color = "#ea2039" },
+  { program = "node", color = "#ea2039" },
+  { program = "cargo", color = "#dea584" },
+  { program = "python", color = "#3572a5" },
+  { program = "pip", color = "#3572a5" },
+  { program = "pipx", color = "#3572a5" },
+]
 
 [window]
 opacity = 1.0
@@ -34,10 +44,3 @@ args = ["--login"]
 [fonts]
 size = 18.0
 family = "Dejavu Sans Mono"
-
-[developer]
-enable-fps-counter = false
-log-level = "OFF"
-
-[bindings]
-keys = []
