@@ -16,7 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	"wakatime/vim-wakatime",
+	{ "wakatime/vim-wakatime", lazy = false },
 
 	{ "olimorris/onedarkpro.nvim", priority = 1000 },
 
