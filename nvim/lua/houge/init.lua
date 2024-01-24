@@ -23,10 +23,14 @@ local plugins = {
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
 	{
-
 		"hougesen/blame-me.nvim",
 		-- dir = "/home/geg/Desktop/projects/blame-me.nvim",
 		opts = {},
+	},
+
+	{
+		"hougesen/hitt",
+		-- dir = "/home/geg/Desktop/projects/hitt",
 	},
 
 	{
