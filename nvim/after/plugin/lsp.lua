@@ -6,24 +6,9 @@ local luasnip = require("luasnip")
 lsp.preset("recommended")
 
 local default_lsps = {
-	-- typescript
 	"tsserver",
 	"eslint",
-
-	-- rust
 	"rust_analyzer",
-
-	-- cpp
-	"clangd",
-
-	-- python
-	"pyright",
-	"ruff_lsp",
-
-	-- haskell
-	"hls",
-
-	-- vue
 	"volar",
 }
 
