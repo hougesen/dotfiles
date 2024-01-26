@@ -57,14 +57,6 @@ local plugins = {
 
 	"mg979/vim-visual-multi",
 
-	{
-		"akinsho/toggleterm.nvim",
-		version = "*",
-		opts = {
-			open_mapping = [[<C-S-`>]],
-		},
-	},
-
 	{ "folke/neodev.nvim", opts = {} },
 
 	{
