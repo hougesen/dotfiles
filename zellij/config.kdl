@@ -1,5 +1,6 @@
 keybinds {
     unbind "Ctrl q"
+    unbind "Ctrl o"
 
     normal {
     }
@@ -107,7 +108,9 @@ keybinds {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        bind "Ctrl o" { SwitchToMode "Normal"; }
+        unbind "Ctrl o"
+        // bind "Ctrl o" { SwitchToMode "Normal"; }
+
         bind "Ctrl s" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
         bind "w" {
@@ -167,7 +170,8 @@ keybinds {
         bind "Ctrl s" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl o" { SwitchToMode "Session"; }
+       unbind "Ctrl o"
+        // bind "Ctrl o" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
         bind "Ctrl t" { SwitchToMode "Tab"; }
@@ -223,6 +227,7 @@ themes {
         cyan "#56b6c2"
         white "#abb2bf"
         orange "#d19a66"
+        selection "#5c6370"
     }
 }
 
