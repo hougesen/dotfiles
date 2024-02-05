@@ -1,5 +1,6 @@
 editor = "nvim"
-blinking_cursor = true
+# https://github.com/raphamorim/rio/issues/437
+blinking-cursor = false
 performance = "High"
 use-fork = true
 theme = "onedark"
