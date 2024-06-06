@@ -148,10 +148,25 @@ keybinds {
         bind "Ctrl g" { SwitchToMode "Locked"; }
         // bind "Ctrl q" { Quit; }
         bind "Alt n" { NewPane; }
-        bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
-        bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
-        bind "Alt j" "Alt Down" { MoveFocus "Down"; }
-        bind "Alt k" "Alt Up" { MoveFocus "Up"; }
+
+
+        bind "Alt Left" { MoveFocusOrTab "Left"; }
+        bind "Alt Right" { MoveFocusOrTab "Right"; }
+        bind "Alt Down" { MoveFocus "Down"; }
+        bind "Alt Up" { MoveFocus "Up"; }
+
+
+        // bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
+        // bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
+        // bind "Alt j" "Alt Down" { MoveFocus "Down"; }
+        // bind "Alt k" "Alt Up" { MoveFocus "Up"; }
+
+        unbind "Alt h"
+        unbind "Alt l"
+        unbind "Alt j"
+        unbind "Alt k"
+
+
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
@@ -230,5 +245,7 @@ themes {
         selection "#5c6370"
     }
 }
+
+mouse_mode true
 
 theme "onedarkpro"
