@@ -65,6 +65,8 @@ local plugins = {
 		event = "VeryLazy",
 		opts = {},
 	},
+
+	"b0o/schemastore.nvim",
 }
 
 local opts = {

@@ -29,11 +29,11 @@ local formatters_by_ft = {
 
 	-- injected = {}
 
-	sh = { "shellcheck" },
+	-- sh = { "shellcheck", "shfmt" },
 
 	toml = { "taplo" },
 
-	["_"] = { "trim_whitespace" },
+	["_"] = { "trim_whitespace", "trim_newlines" },
 }
 
 local prettier_file_types = {

@@ -2,6 +2,7 @@ local lsp = require("lsp-zero")
 local lspconfig = require("lspconfig")
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local schemastore = require("schemastore")
 
 lsp.preset("recommended")
 
@@ -71,6 +72,15 @@ lspconfig.lua_ls.setup({
 			runtime = {
 				version = "LuaJIT",
 			},
+		},
+	},
+})
+
+lspconfig.jsonls.setup({
+	settings = {
+		json = {
+			schemas = schemastore.json.schemas(),
+			validate = { enable = true },
 		},
 	},
 })
