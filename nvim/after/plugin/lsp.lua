@@ -1,4 +1,5 @@
 local lsp = require("lsp-zero")
+local util = require("lspconfig.util")
 local lspconfig = require("lspconfig")
 local cmp = require("cmp")
 local luasnip = require("luasnip")
@@ -65,6 +66,37 @@ lsp.on_attach(function(_client, bufnr)
 		vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 	end, opts)
 end)
+
+local function get_typescript_server_path(root_dir)
+	local global_ts = "/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib"
+	-- Alternative location if installed as root:
+	-- local global_ts = '/usr/local/lib/node_modules/typescript/lib'
+	local found_ts = ""
+	local function check_dir(path)
+		found_ts = util.path.join(path, "node_modules", "typescript", "lib")
+		if util.path.exists(found_ts) then
+			return path
+		end
+	end
+	if util.search_ancestors(root_dir, check_dir) then
+		return found_ts
+	else
+		return global_ts
+	end
+end
+
+lspconfig.volar.setup({
+	filetypes = { "vue" },
+	root_dir = util.root_pattern("package.json"),
+	init_options = {
+		vue = {
+			hybridMode = false,
+		},
+		typescript = {
+			tsdk = get_typescript_server_path(vim.fn.getcwd()),
+		},
+	},
+})
 
 lspconfig.lua_ls.setup({
 	settings = {

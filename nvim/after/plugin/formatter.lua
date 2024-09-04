@@ -45,6 +45,8 @@ local prettier_file_types = {
 	"javascript",
 	"javascriptreact",
 	"json",
+	"jsonc",
+	"json5",
 	"less",
 	"markdown",
 	"markdown.mdx",
