@@ -23,17 +23,30 @@ local formatters_by_ft = {
 
 	ocaml = { "ocamlformat" },
 
+	just = { "just" },
+	justfile = { "just" },
+
 	crystal = {},
 
 	dart = { "dart_format" },
 
+	nim = { "nimpretty" },
+
+	haskell = { "ormolu" },
+
 	-- injected = {}
 
-	-- sh = { "shellcheck", "shfmt" },
+	sh = { "shfmt" },
 
 	toml = { "taplo" },
 
+	php = { "pretty-php", "php_cs_fixer" },
+
+	gleam = { "gleam" },
+
 	["_"] = { "trim_whitespace", "trim_newlines" },
+
+	kotlin = { "ktfmt" },
 }
 
 local prettier_file_types = {
@@ -68,7 +81,7 @@ formatters_by_ft["markdown"] = { p, "injected" }
 conform.setup({
 	formatters_by_ft = formatters_by_ft,
 	format_on_save = {
-		timeout_ms = 500,
+		timeout_ms = 5000,
 		lsp_fallback = true,
 	},
 })

@@ -1,0 +1,8 @@
+[tools]
+erlang = "latest"
+gleam = "latest"
+lua = "latest"
+usage = "latest"
+zig = "latest"
+kotlin = "latest"
+ruby = "3"

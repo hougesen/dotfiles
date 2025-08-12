@@ -8,13 +8,11 @@ local schemastore = require("schemastore")
 lsp.preset("recommended")
 
 local default_lsps = {
-	"tsserver",
+	"ts_ls",
 	"eslint",
 	"rust_analyzer",
 	"volar",
 }
-
-lsp.ensure_installed(default_lsps)
 
 lsp.setup_servers(default_lsps)
 
@@ -68,7 +66,6 @@ lsp.on_attach(function(_client, bufnr)
 end)
 
 local function get_typescript_server_path(root_dir)
-	local global_ts = "/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib"
 	-- Alternative location if installed as root:
 	-- local global_ts = '/usr/local/lib/node_modules/typescript/lib'
 	local found_ts = ""
@@ -78,6 +75,9 @@ local function get_typescript_server_path(root_dir)
 			return path
 		end
 	end
+
+	local global_ts = "/home/houge/.asdf/installs/nodejs/22.2.0/lib/node_modules/typescript/lib"
+
 	if util.search_ancestors(root_dir, check_dir) then
 		return found_ts
 	else
@@ -108,6 +108,10 @@ lspconfig.lua_ls.setup({
 	},
 })
 
+lspconfig.dartls.setup({
+	cmd = { "fvm", "dart", "language-server", "--protocol=lsp" },
+})
+
 lspconfig.jsonls.setup({
 	settings = {
 		json = {
@@ -116,6 +120,11 @@ lspconfig.jsonls.setup({
 		},
 	},
 })
+
+lspconfig.nim_langserver.setup({})
+lspconfig.hls.setup({})
+lspconfig.gleam.setup({})
+lspconfig.ruby_lsp.setup({})
 
 lsp.setup()
 
@@ -136,3 +145,14 @@ cmp.setup({
 		["<S-Tab>"] = cmp_action.select_prev_or_fallback(),
 	}),
 })
+
+-- https://github.com/neovim/neovim/issues/30985#issuecomment-2447329525
+for _, method in ipairs({ "textDocument/diagnostic", "workspace/diagnostic" }) do
+	local default_diagnostic_handler = vim.lsp.handlers[method]
+	vim.lsp.handlers[method] = function(err, result, context, config)
+		if err ~= nil and err.code == -32802 then
+			return
+		end
+		return default_diagnostic_handler(err, result, context, config)
+	end
+end

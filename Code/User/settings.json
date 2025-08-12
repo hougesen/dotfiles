@@ -30,7 +30,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[mjml]": {
-    "editor.defaultFormatter": "mjmlio.vscode-mjml"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[nim]": {
     "editor.defaultFormatter": "nimsaem.nimvscode"
@@ -73,6 +73,7 @@
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "[yaml]": {
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "biome.requireConfiguration": false,
@@ -82,6 +83,7 @@
   "C_Cpp.clang_format_style": "WebKit",
   "C_Cpp.default.cppStandard": "gnu++20",
   "C_Cpp.intelliSenseEngine": "disabled",
+  "chat.commandCenter.enabled": false,
   "clangd.arguments": ["--clang-tidy"],
   "clangd.path": "/home/geg/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.6/clangd_15.0.6/bin/clangd",
   "crystal-lang.completion": true,
@@ -101,7 +103,7 @@
   ],
   "css.lint.duplicateProperties": "warning",
   "dart.flutterSdkPath": ".fvm/flutter_sdk",
-  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.formatOnPaste": false,
@@ -124,8 +126,9 @@
   "eslint.alwaysShowStatus": true,
   "eslint.validate": ["typescript", "javascript"],
   "explorer.confirmDragAndDrop": true,
+  "extensions.ignoreRecommendations": true,
   "files.associations": {
-    "*.css": "tailwindcss",
+    "*.css": "css",
     "*.heex": "html-eex",
     "*.svg": "html",
     "Cargo.lock": "toml",
@@ -141,6 +144,7 @@
   },
   "git.autofetch": true,
   "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "always",
   "gitlens.codeLens.enabled": false,
   "go.lintTool": "golangci-lint",
   "haskell.manageHLS": "GHCup",
@@ -150,6 +154,12 @@
     "jest.showCoverageOnLoad": false
   },
   "js/ts.implicitProjectConfig.checkJs": false,
+  "json.schemas": [
+    {
+      "fileMatch": ["*dev-docs.json"],
+      "url": "/home/houge/.vscode/extensions/dev-docs.dev-docs-0.195.0/devDocsSchema.json"
+    }
+  ],
   "julia.executablePath": "/home/geg/.juliaup/bin/julia",
   "julia.symbolCacheDownload": true,
   "less.lint.duplicateProperties": "warning",
@@ -251,6 +261,7 @@
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "trunk.trunkGrayOutNonBlockingIssues": false,
+  "update.showReleaseNotes": false,
   "vetur.completion.autoImport": false,
   "vetur.completion.tagCasing": "initial",
   "vetur.languageFeatures.updateImportOnFileMove": false,
